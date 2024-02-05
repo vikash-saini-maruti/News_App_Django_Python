@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Your Website Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <style>
+		body {
+			background-color: black;
+			color: white;
+			margin: 0; /* Remove default margin for the body */
+			font-family: 'Arial', sans-serif; /* Specify a fallback font */
+		}
+		.jumbotron {
+			background-color: #ffc107; /* Yellow color */
+			text-align: center;
+			padding: 20px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+			margin-bottom: 20px; /* Add margin to separate from the content below */
+			position: relative; /* Add relative positioning to the jumbotron */
+		  }
+		.news-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+		}
+		.news-item {
+			background-color: #343a40; /* Dark gray background color */
+			color: #ffffff; /* White text color */
+			border: 1px solid #ffffff;
+			padding: 20px;
+			font-size: 140%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 20px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+		}
+		.photo {
+			border: 1px solid white;
+			max-width: 80%;
+			margin-top: 20px;
+		}
+		.description {
+			border: 1px solid white;
+			background-color: black;
+			padding: 40px;
+			font-size: 120%;
+			margin-top: 20px;
+		}
+
+		.news-app {
+			font-size: 500%;
+			color: black;
+			display: inline-block; /* Display as inline block to allow positioning */
+			font-style: italic; 
+			
+		  }
+
+
+		  .trademark {
+			position: relative;
+			bottom: -18px;
+			right: -8px;
+			font-size: 50%;
+			color: gray;
+		}
+	</style>
+	
+</head>
+<body>
+	<!---->
+	<div class="jumbotron">
+		<h1 class="news-app">News_App<span class="trademark">by_Saini</span></h1>
+	  </div>
+
+    <div class="container">
+        <div class="news-container">
+            {% for news, des, img_url in mylist %}
+                <div class="news-item">
+                    <h1 class="news-headline"> {{ news }}</h1>
+                    <img src="{{ img_url }}" alt="" class="photo">
+                    <p class="description">{{ des }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
