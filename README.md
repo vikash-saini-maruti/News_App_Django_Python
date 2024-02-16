@@ -36,7 +36,7 @@ This project, **News_App_Django_Python**, is a web application built using Djang
 
 
 -----------------------------------------------------
-
+Setup How to use
 
 Here's a rewritten version of the setup instructions in simpler language for a README:
 Description 
@@ -97,7 +97,6 @@ Description
 The project is primarily developed using Django, a high-level Python web framework. It integrates the NewsAPI, a third-party API service for fetching news data. The project's structure follows Django's MVC (Model-View-Controller) architecture. The `views.py` file handles the logic for fetching news articles and rendering them on the web page.
 
 
-## Technical Detail
 The project's main functionality is encapsulated within the `views.py` file, where the logic for fetching news articles from the NewsAPI and rendering them on the web page resides. Below are the key functions and their roles within the application:
 
 ### index(request)
